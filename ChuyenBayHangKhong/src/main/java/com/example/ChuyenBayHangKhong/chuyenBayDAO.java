@@ -60,10 +60,12 @@ public class chuyenBayDAO {
 //        System.out.println(cb);
         return chuyenBayRepository.getDoDai(dodai1,dodai2);
     }
-//    public void getSGNBMV(){
+    @GetMapping(value = "timsgbmt/{sg}/{bmt}")
+    public List<chuyenBay> getSGNBMV(@PathVariable("sg") String sg, @PathVariable("bmt") String bmt){
 //        List<chuyenBay> cb = chuyenBayRepository.getSGNBMV("SGN","BMV");
 //        System.out.println(cb);
-//    }
+        return chuyenBayRepository.getSGNBMV(sg,bmt);
+    }
 //    public void getSGN(){
 //        List<chuyenBay> cb = chuyenBayRepository.getSGN("sgn");
 //        System.out.println(cb);
